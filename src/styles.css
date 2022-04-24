@@ -1,0 +1,153 @@
+body {
+    background-color: aliceblue;
+}
+
+header {
+    background-color: #d9edfd;
+    color: #42a5f5;
+    margin: 0 auto;
+    display: block;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 70px;
+    font-style: italic;
+}
+
+h2 {
+    text-align: right;
+}
+
+button {
+    margin: 10px;
+    padding: 8px;
+    font-size: 18px;
+    background-color: aliceblue;
+    border-color: #42a5f5;
+    border-radius: 50px;
+    color: #42a5f5;
+    box-shadow: #888c8d 0px 8px 8px 0;
+}
+
+button:hover {
+    transition: all 200ms ease;
+    cursor: pointer;
+    background: #aaaeb3;
+    color: aliceblue;
+}
+
+.search {
+    color: #aaaeb3;
+}
+
+input {
+    background-color: transparent;
+    border-color: #42a5f5;
+    border-radius: 70px;
+    padding: 8px;
+    font-size: 20px;
+    box-shadow: #888c8d 0px 8px 8px 0;
+}
+
+#submit {
+    padding: 8px;
+    font-size: large;
+    border-radius: 50px;
+    border: #42a5f5;
+    background-color: #42a5f5;
+    box-shadow: #888c8d 0px 8px 8px 0;
+}
+
+#submit:hover {
+    transition: all 200ms ease;
+    cursor: pointer;
+    background: #aaaeb3;
+    border: #42a5f5;
+}
+
+section {
+    color: #aaaeb3;
+    line-height: 70px;
+    padding-left: 95px;
+    font-weight: bold;
+    font-family: "Sawarabi Mincho", serif;
+}
+
+.city {
+    font-size: 65px;
+}
+
+.date {
+    font-size: 40px;
+}
+
+.time {
+    font-size: 40px;
+}
+
+.temp {
+    display: block;
+    text-align: center;
+    font-size: 70px;
+    color: #474747;
+    background-color: #d9edfd;
+    padding: 60px;
+    border-radius: 20px;
+    position: relative;
+    top: 40px;
+}
+
+#current-celsius,
+#current-fahrenheit {
+    font-size: 40px;
+    color: #aaaeb3;
+}
+
+#current-celsius:hover {
+    transition: all 200ms ease;
+    color: aliceblue;
+}
+
+#current-fahrenheit:hover {
+    transition: all 200ms ease;
+    color: aliceblue;
+}
+
+.other {
+    text-align: right;
+    color: #aaaeb3;
+    font-size: 25px;
+    position: relative;
+    right: 80px;
+}
+
+#sky {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.col-2 {
+    text-align: center;
+    font-size: 30px;
+    color: #aaaeb3;
+    font-weight: bold;
+    font-family: "Sawarabi Mincho", serif;
+}
+
+#next-day {
+    font-size: 40px;
+    background-color: #d9edfd;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+#next-day:hover {
+    transition: all 200ms ease;
+    background-color: #aaaeb3;
+    color: #d9edfd;
+}

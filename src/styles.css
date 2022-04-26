@@ -151,3 +151,7 @@ section {
     background-color: #aaaeb3;
     color: #d9edfd;
 }
+
+a {
+    margin-left: 20px;
+}

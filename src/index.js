@@ -94,8 +94,7 @@ celsius.addEventListener("click", changeUnitCelsius);
 function changeUnitFahrenheit(event) {
     event.preventDefault();
     let currentTemp = document.querySelector(".current-temp");
-    let changeToFahrenheit = ((celsius*9)/5)+32;
-    currentTemp.innerHTML = `${changeToFahrenheit}`;
+    currentTemp.innerHTML = "66";
 }
 let fahrenheit = document.querySelector("#current-fahrenheit");
 fahrenheit.addEventListener("click", changeUnitFahrenheit);

@@ -36,11 +36,10 @@ function showTemp(response) {
     feel.innerHTML = `feels like ${feelCondition}℃`;
 
     let humidity = document.querySelector("#humidity");
-    humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`
+    humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
 
     let wind = document.querySelector("#wind");
-    wind.innerHTML = `Wind: ${response.data.main.wind.speed}km/h`
-    
+    wind.innerHTML = `Wind: ${response.data.main.wind.speed}km/h`;
 }
 
 function searchCity(city) {
@@ -95,7 +94,8 @@ celsius.addEventListener("click", changeUnitCelsius);
 function changeUnitFahrenheit(event) {
     event.preventDefault();
     let currentTemp = document.querySelector(".current-temp");
-    currentTemp.innerHTML = "66";
+    let changeToFahrenheit = ((celsius*9)/5)+32;
+    currentTemp.innerHTML = `${changeToFahrenheit}`;
 }
 let fahrenheit = document.querySelector("#current-fahrenheit");
 fahrenheit.addEventListener("click", changeUnitFahrenheit);

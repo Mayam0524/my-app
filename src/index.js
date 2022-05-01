@@ -18,6 +18,15 @@ if (minutes < 10) {
 }
 time.innerHTML = `${hour}:${minutes}`;
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
+
 //Temperature and more
 function showTemp(response) {
     let inputCity = document.querySelector(".city")
@@ -27,19 +36,23 @@ function showTemp(response) {
     let currentTemp = document.querySelector(".current-temp")
     currentTemp.innerHTML = `${temperature}`;
 
+    let icon = document.querySelector("#icon");
+    icon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
+
     let sky = document.querySelector("#sky");
     let skyCondition = response.data.weather[0].description;
     sky.innerHTML = skyCondition;
 
     let feel = document.querySelector("#feel");
     let feelCondition = Math.round(response.data.main.feels_like);
-    feel.innerHTML = `feels like ${feelCondition}℃`;
+    feel.innerHTML = `${feelCondition}℃`;
 
     let humidity = document.querySelector("#humidity");
-    humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+    humidity.innerHTML = `${response.data.main.humidity}%`;
 
     let wind = document.querySelector("#wind");
-    wind.innerHTML = `Wind: ${response.data.main.wind.speed}km/h`;
+    let windElement = 
+    wind.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function searchCity(city) {

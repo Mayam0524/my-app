@@ -11,122 +11,152 @@
 </head>
 
 <body>
-    <header>
-        <h1>
-            Weather Forecast
-        </h1>
-        <h2>
-            <button id="current">
-                Current
-            </button>
-            <form id="search-form">
-                <span class="search">
-                    <input type="text" id="search-input" placeholder="Enter city name" autocomplete="off"
-                        autofocus="on" />
-                </span>
-                <input type="submit" value="🔍" id="submit">
-            </form>
-
-        </h2>
-    </header>
-    <br /><br />
-    <section>
-        <p>
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <span class="city">
-                        City
-                    </span><br />
-                    <span class="date">
-                        Day, Month Date, Year
-                    </span><br />
-                    <span class="time">
-                        00:00
+    <small>
+        <header>
+            <h1>
+                <form id="search-form">
+                    <span class="search">
+                        <input type="text" id="search-input" placeholder="Enter city name" autocomplete="off" autofocus="on" />
                     </span>
-                </div>
-                <div class="col-5">
-                    <span class="temp">
-                        <span class="current-temp">
-                            17
+                    <input type="submit" value="🔍" id="submit">
+                    <button id="current">
+                        📍
+                    </button>
+                </form>
+        
+            </h1>
+        </header>
+        <br /><br />
+        <section>
+            <p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <span class="city">
+                            City
+                        </span><br />
+                        <span class="date">
+                            Day, Month Date, Year
+                        </span><br />
+                        <span class="time">
+                            00:00
+                        </span><br>
+                        <span id="sky">
+                            Clear sky
                         </span>
-                        <a href="#" id="current-celsius">°C</a>
-                        <a href="#" id="current-fahrenheit">|°F</a>
-                    </span>
+                    </div>
+                    <div class="col-6">
+                        <span class="temp">
+                            <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt width="50" id="icon">
+                            <span class="current-temp">
+                                17
+                            </span>
+                            <a href="#" id="current-celsius">°C</a>
+                            |
+                            <a href="#" id="current-fahrenheit">°F</a>
+                        </span>
+                    </div>
                 </div>
             </div>
+            </p>
+        </section>
+        <p>
+        <div class="other">
+            feels like
+            <span id="feel">
+                16℃
+            </span><br>
+            Wind:
+            <span id="wind">
+                6
+            </span>
+            km/h
+            <br>
+            Humidity:
+            <span id="humidity">
+                55%
+            </span>
         </div>
         </p>
-    </section><br>
-    <p>
-    <div class="other">
-        <span id="sky">
-            clear sky
-        </span><br>
-        <span id="feel">
-            feels like 16℃
-        </span><br>
-        <span id="wind">
-            Wind: 6km/h
-        </span><br>
-        <span id="humidity">
-            Humidity: 55%
-        </span>
-    </div>
-    </p>
-    <hr>
-    <br><br>
-    <div class="container">
-        <div class="row">
-            <div class="col-2">
-                Mon
-                <div id="next-day">
-                    🌧
+        <hr>
+        <div class="container">
+            <div class="row" id="forecast">
+                <div class="col-2">
+                    <span class="weather-forecast-date">
+                    Mon
+                    </span>
+                    <div id="next-day">
+                        <img src="https://openweathermap.org/img/wn/09d@2x.png" alt width="35" class="weatherIcon">
+                    </div>
+                    <span class="weather-forecast-temperature">
+                    9℃
+                    </span>
                 </div>
-                9℃
-            </div>
-            <div class="col-2">
-                Tue
-                <div id="next-day">
-                    🌩
+                <div class="col-2">
+                    <span class="weather-forecast-date">
+                    Tue
+                    </span>
+                    <div id="next-day">
+                        <img src="https://openweathermap.org/img/wn/11d@2x.png" alt width="35" class="weatherIcon">
+                    </div>
+                    <span class="weather-forecast-temperature">
+                    9℃
+                    </span>
+                    
                 </div>
-                9℃
-            </div>
-            <div class="col-2">
-                Wed
-                <div id="next-day">
-                    ☁
+                <div class="col-2">
+                    <span class="weather-forecast-date">
+                    Wed
+                    </span>
+                    <div id="next-day">
+                        <img src="https://openweathermap.org/img/wn/03d@2x.png" alt width="35" class="weatherIcon">
+                    </div>
+                    <span class="weather-forecast-temperature">
+                    11℃
+                    </span>
                 </div>
-                11℃
-            </div>
-            <div class="col-2">
-                Thu
-                <div id="next-day">
-                    ☁
+                <div class="col-2">
+                    <span class="weather-forecast-date">
+                    Thu
+                    </span>
+                    <div id="next-day">
+                        <img src="https://openweathermap.org/img/wn/03d@2x.png" alt width="35" class="weatherIcon">
+                    </div>
+                    <span class="weather-forecast-temperature">
+                    12℃
+                    </span>
                 </div>
-                12℃
-            </div>
-            <div class="col-2">
-                Fri
-                <div id="next-day">
-                    ☀
+                <div class="col-2">
+                    <span class="weather-forecast-date">
+                    Fri
+                    </span>
+                    <div id="next-day">
+                        <img src="https://openweathermap.org/img/wn/01d@2x.png" alt width="35" class="weatherIcon">
+                    </div>
+                    <span class="weather-forecast-temperature">
+                    15℃
+                    </span>
                 </div>
-                15℃
-            </div>
-            <div class="col-2">
-                Sat
-                <div id="next-day">
-                    🌧
+                <div class="col-2">
+                    <span class="weather-forecast-date">
+                        Sat
+                    </span>
+                    <div id="next-day">
+                        <img src="https://openweathermap.org/img/wn/10d@2x.png" alt width="35" class="weatherIcon">
+                    </div>
+                    <span class="weather-forecast-temperature">
+                        10℃
+                    </span>
                 </div>
-                10℃
             </div>
         </div>
-    </div>
-    <br><br>
-    <a href="https://github.com/Mayam0524/my-app" target="_blank">
-        coded by Yuna
-    </a>
-    <br><br>
+        <br>
+        <p>
+        <a href="https://github.com/Mayam0524/my-app" target="_blank">
+            Open-source code
+        </a>by yuna
+        </p>
+    </small>
     <script src="src/index.js"></script>
 </body>
 

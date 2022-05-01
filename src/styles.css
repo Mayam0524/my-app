@@ -1,8 +1,8 @@
 
 body {
     background-color: aliceblue;
-    max-width: 700px;
-    padding: 20px;
+    max-width: 600px;
+    padding: 10px;
     margin: 30px auto;
     border: 1px solid #888c8d;
     border-radius: 20px;
@@ -13,7 +13,7 @@ header {
     color: #42a5f5;
     margin: 0 auto;
     display: block;
-    padding: 18px;
+    padding: 15px;
     border-radius: 20px;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
         "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -31,7 +31,7 @@ button {
     background-color: #42a5f5;
     border-color: #42a5f5;
     border-radius: 50px;
-    box-shadow: #888c8d 0px 8px 8px 0;
+    box-shadow: #aaaeb3 0px 6px p6x 0;
 }
 
 button:hover {
@@ -51,7 +51,7 @@ input {
     border-radius: 70px;
     padding: 8px;
     font-size: 18px;
-    box-shadow: #888c8d 0px 8px 8px 0;
+    box-shadow: #aaaeb3 0px 6px 6px 0;
 }
 
 #submit {
@@ -60,7 +60,7 @@ input {
     border-radius: 50px;
     border: #42a5f5;
     background-color: #42a5f5;
-    box-shadow: #888c8d 0px 8px 8px 0;
+    box-shadow: #aaaeb3 0px 6px 6px 0;
 }
 
 #submit:hover {
@@ -79,7 +79,7 @@ section {
 }
 
 .city {
-    font-size: 50px;
+    font-size: 45px;
 }
 
 .date,
@@ -94,22 +94,15 @@ section {
 .temp {
     display: block;
     text-align: center;
-    font-size: 30px;
+    font-size: 60px;
     background-color: #d9edfd;
-    padding: 45px 10px 45px 10px;
+    padding: 45px 20px 45px 20px;
     border-radius: 20px;
     position: relative;
     top: 20px;
 }
 .current-temp {
     font-size: 50px;
-    color: #474747;
-}
-
-
-#current-celsius,
-#current-fahrenheit {
-    font-size: 30px;
     color: #aaaeb3;
 }
 
@@ -133,15 +126,14 @@ section {
 
 .col-2 {
     text-align: center;
-    font-size: 20px;
+    line-height: 40px;
     color: #aaaeb3;
-    font-weight: bold;
     font-family: "Sawarabi Mincho", serif;
 }
 
 #next-day {
     background-color: #d9edfd;
-    padding: 15px;
+    padding: 20px;
     border-radius: 20px;
 }
 
@@ -150,6 +142,24 @@ section {
     background-color: #aaaeb3;
     color: #d9edfd;
 }
+
+.weather-forecast-date {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.weather-forecast-temperatures {
+    font-size: 18px;
+}
+
+.weather-forecast-temperature-max {
+    font-weight: bold;
+}
+
+.weather-forecast-temperature-min {
+    opacity: 0.8;
+}
+
 
 a {
     margin-left: 20px;

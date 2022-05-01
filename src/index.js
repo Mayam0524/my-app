@@ -34,7 +34,7 @@ function showTemp(response) {
 
     let temperature = Math.round(response.data.main.temp)
     let currentTemp = document.querySelector(".current-temp")
-    currentTemp.innerHTML = `${temperature}`;
+    currentTemp.innerHTML = `${temperature}℃`;
 
     let icon = document.querySelector("#icon");
     icon.setAttribute("src", `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`)
@@ -53,6 +53,39 @@ function showTemp(response) {
     let wind = document.querySelector("#wind");
     let windElement = 
     wind.innerHTML = Math.round(response.data.wind.speed);
+}
+
+function displayForecast(response) {
+    let forecast = response.data.daily;
+
+    let forecastElement = document.querySelector("#forecast");
+    let forecastHTML = `<div class="row">`;
+    forecast.forEach(function (forecastDay, index) {
+        if (index < 6) {
+            forecastHTML = forecastHTML +
+            `<div class="col-2">
+                <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+                <img
+                src="http://openweathermap.org/img/wn/${
+                    forecastDay.weather[0].icon
+                }@2x.png"
+                alt=""
+                width="38"
+                class="icon"
+                />
+                <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-temperature-max"> ${Math.round(
+                    forecastDay.temp.max
+                )}° </span>
+                <span class="weather-forecast-temperature-min"> ${Math.round(
+                    forecastDay.temp.min
+                )}° </span>
+                </div>
+            </div>`;
+        }
+    });
+    forecastHTML = forecastHTML + `</div>`;
+    forecastElement.innerHTML = forecastHTML;
 }
 
 function searchCity(city) {
@@ -92,22 +125,3 @@ function showPosition(event) {
 
 let currentLocation = document.querySelector("#current");
 currentLocation.addEventListener("click", showPosition);
-
-
-//Celsius & Fahrenheit
-function changeUnitCelsius(event) {
-    event.preventDefault();
-    let currentTemp = document.querySelector(".current-temp")
-    currentTemp.innerHTML = "17";
-}
-
-let celsius = document.querySelector("#current-celsius");
-celsius.addEventListener("click", changeUnitCelsius);
-
-function changeUnitFahrenheit(event) {
-    event.preventDefault();
-    let currentTemp = document.querySelector(".current-temp");
-    currentTemp.innerHTML = "66";
-}
-let fahrenheit = document.querySelector("#current-fahrenheit");
-fahrenheit.addEventListener("click", changeUnitFahrenheit);
